@@ -45,7 +45,9 @@ locals {
 }
 ```
 
-* "ingress" is the label of our dynamic block.
+* "ingress" is the label of our dynamic block
+* for_each is used to iterate over
+* the content block defines the body of each generated block. In our example it contains information of each of our inbound rules.
 
 ```
 resource "aws_security_group" "allow_some_ports" {
